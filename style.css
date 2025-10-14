@@ -1,0 +1,272 @@
+/* introkuvan tyyli */
+
+.intro-photo {
+  max-width: 100%;
+  height: auto;
+}
+
+/* introleiska, kuva vasemmalla ja  teksti oikealla isommilla näytöillä */
+
+.intro-inner {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.intro-photo {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .intro-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+  .intro-photo {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+/* leipätekstin fontit */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  margin: 0;
+  background-color: #F9E0D9;
+  color: #F9FBFF;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/*mainin leiska*/
+
+main {
+  width: 70%;
+  margin: 40px auto 0;
+  max-width: 900px;
+  flex: 1;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column; 
+}
+
+main {
+  flex: 1;
+}
+
+footer {
+  margin-top: auto;
+}
+
+/* hedari */
+
+header {
+  background-color: #856088;
+  color: #F9FBFF;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 10%;
+}
+
+header .logo {
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+nav a {
+  color: #F9FBFF;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 0.95rem;
+  transition: opacity 0.2s;
+}
+
+nav a:hover {
+  opacity: 0.8;
+}
+
+/* kortit (intro, blogi) */
+
+.intro, .teaser, .blog-list article {
+  background-color: #2F1847;
+  color: #F9FBFF;
+  padding: 30px;
+  margin-bottom: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+/* otsikkofontit */
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+}
+
+h1 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+p {
+  font-size: 15px;
+  color: #F9FBFF;
+}
+
+/* nappityyli */
+
+.btn {
+  display: inline-block;
+  background: #BA5C12;
+  color: #F9FBFF;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.btn:hover {
+  background: #584D3D;
+}
+
+/* kontaktiformin leiskausta*/
+
+.contact-form {
+  background-color: #2F1847;
+  padding: 30px;
+  margin-bottom: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.contact-form form {
+  width: 100%;
+  margin: 0;
+}
+
+.contact-form label {
+  color: #F9FBFF;
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  background: #584D3D;
+  color: #F9FBFF;
+  border: none;
+  padding: 10px 12px;
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 12px;
+  transition: box-shadow .15s ease, transform .08s ease;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: rgba(249,251,255,0.75);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(249,251,255,0.08);
+}
+
+.contact-form .btn {
+  background: #BA5C12;
+  color: #F9FBFF;
+}
+
+/* footteri */
+
+footer {
+  background: #856088;
+  color: #F9FBFF;
+  text-align: center;
+  padding: 25px 10%;
+  font-size: 0.9rem;
+  margin-top: auto; /* Ensures footer stays at the bottom */
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+/* logon tyylitykset */
+
+.site-logo {
+  width: 120px;
+  max-width: 40%;
+  height: auto;
+  display: block;
+}
+
+
+header nav {
+  margin-left: 20px;
+}
+
+@media (max-width: 768px) {
+  .site-logo {
+    width: 100px;
+  }
+}
+
+/* responsiivinen leiska */
+
+@media (max-width: 768px) {
+  main {
+    width: 90%;
+  }
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+  nav a {
+    display: inline-block;
+    margin: 10px;
+  }
+}
+
+/* postin kuvan tyyli */
+
+.teaser img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 16px 0;
+}
